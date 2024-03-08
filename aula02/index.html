@@ -1,0 +1,18 @@
+<html>
+    <div aling="center">
+        <br><br><img id="imagem2" src="img2.jpg" width="200px"><br><br>
+        <button id="btnabre">Abrir</button>
+        <button id="btnfecha">Fechar</button>
+    </div>
+    <br><br>
+</html>
+<script>
+    var botaoabre = document.querySelector('#btnabre');
+    botaoabre.addEventListener('click', function(){
+        document.querySelector('#imagem2').setAttribute('src', 'img1.jpg');
+    });
+    var botaofecha = document.querySelector('#btnfecha');
+    botaofecha.addEventListener('click', function(){
+        document.querySelector('#imagem2').setAttribute('src', 'img2.jpg');
+    });
+</script>
