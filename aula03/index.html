@@ -1,0 +1,71 @@
+<html>
+    <title>ola 2F</title>
+    <body class="centralizado">
+        <table id="tabela" height="500px">
+              <tr>
+                <td>
+                    <br>
+                </td>
+              </tr>
+              <tr>
+                <td><b>bem vindo ao meu site do 2F</b></td>
+              </tr>
+              <tr>
+                <td><img id="imagem" src="fechado.jpg"></td>
+            </tr>
+              <tr>
+                <td>
+                    <button id="botaoaco">acordar</button>
+                    <button id="botaodor">dormir</button>
+                </td>
+              </tr>
+        </table>
+    </body>
+</html>
+
+<style>
+    .centralizado{
+    display: flex;
+    justify-content: center;
+    }
+
+    #tabela{
+        text-align: center;
+    }
+</style>
+
+<script>
+    var botaoaco = document.querySelector("#botaoaco")
+    botaoaco.addEventListener("click", minhafuncaoacordar)
+
+    var botaodor = document.querySelector("#botaodor")
+    botaodor.addEventListener("click", minhafuncaodormir)
+
+    var x = 0;
+    var y = 0;
+
+    function minhafuncaoacordar(){
+        document.getElementById("imagem").src = "aberto.jpg";
+        document.getElementById("botaoaco").disabled = true;
+        document.getElementById("botaodor").disabled = false;
+        x = setInterval(abre,50)
+        y = setInterval(fecha,2000)
+    }
+
+    function minhafuncaodormir(){
+        document.getElementById("imagem").src = "fechado.jpg";
+        document.getElementById("botaodor").disabled = true;
+        document.getElementById("botaoaco").disabled = false;
+        clearInterval(x);
+        clearInterval(y);
+    }
+
+    function abre(){
+    document.getElementById("imagem").src = "aberto.jpg";
+    }
+
+    function fecha(){
+        document.getElementById("imagem").src = "fechado.jpg";
+    }
+
+</script>
