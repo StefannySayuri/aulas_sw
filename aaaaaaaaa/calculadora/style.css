@@ -1,0 +1,22 @@
+
+body {
+    text-align: center;
+ 
+  background-color:powderblue;
+  border-radius: 1px;
+  color:aqua;
+  display: block;
+  text-decoration:lightblue;
+  margin-bottom: 10em;
+}
+
+.button{
+    width: 50px;
+    height: 50px;
+    color: rgb(112, 145, 238);
+}
+
+.visor{
+    width: 260px;
+    height: 30px;
+}
